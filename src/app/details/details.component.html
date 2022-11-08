@@ -1,0 +1,136 @@
+<!-- <div id="all-content">
+    <a id="home-page-link" routerLink="/">
+        <mat-icon>arrow_back</mat-icon> <span>Back</span>
+    </a>
+
+<div class="container">
+
+    <img id="flag" src="{{countryObj!.flags.svg}}" alt="Country Flag">
+
+    <div class="content">
+
+        <div id="title">
+                {{countryObj!.name.common}}
+        </div>
+
+        <div class="info">
+
+            <div class="info-1">
+                <ul id="list-1">
+                    <li> 
+                        Official name: <span class="data">{{countryObj.name.official}}</span>
+                    </li>
+                    <li>
+                        Population: <span class="data">{{countryObj.population}}</span>
+                    </li>
+                    <li>
+                        Region: <span class="data">{{countryObj.region}}</span>
+                    </li>
+                    <li>
+                        Sub-region: <span class="data">{{countryObj.subregion}}</span>
+                    </li>
+                    <li>
+                        Capital: <span class="data">{{countryObj.capital[0]}}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-2">
+                <ul id="list-2">
+                    <li>
+                        Top level domain: <span class="data">{{countryObj.tld[0]}}</span>
+                    </li>
+                    <li>
+                        Currencies: <span class="data">{{currency}}</span>
+                    </li>
+                    <li>
+                        Languages: <span class="data">{{language}}</span> <span class="data" *ngIf="language2">{{language2}}</span>
+                    </li>
+                    <li>
+                        Independent: <span class="data">{{countryObj.independent ? 'Yes' : 'No'}}</span> 
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="border-countries">
+            <div id="border-title">
+                Border countries:  <span *ngIf="!borders">-</span>
+            </div>
+            <div id="border-links">
+
+                <a *ngFor="let border of borders" href="/home/{{border}}">
+                    <span>{{ border }}</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div> -->
+
+
+
+
+
+<div class="container">
+    <div class="back-btn">
+        <a  routerLink="/">
+            <mat-icon>arrow_back</mat-icon> <span>Back</span>
+        </a>
+    </div>
+    <div class="content">
+       <div id="img-div">
+            <img id="flag" src="{{countryObj!.flags.png}}" alt="Country Flag">
+       </div>
+       <div id="info">
+           <div id="title">
+                {{countryObj!.name.common}}
+           </div>
+           <div id="section">
+               <div id="section-1">
+                <p>
+                    Official name: <span class="data">{{countryObj.name.official}}</span>
+                </p>
+                <p>
+                    Population: <span class="data">{{countryObj.population}}</span>
+                </p>
+                <p>
+                    Region: <span class="data">{{countryObj.region}}</span>
+                </p>
+                <p>
+                    Sub-region: <span class="data">{{countryObj.subregion}}</span>
+                </p>
+                <p>
+                    Capital: <span class="data">{{countryObj.capital[0]}}</span>
+                </p>
+               </div> 
+               <div id="section-2">
+                <p>
+                    Top level domain: <span class="data">{{countryObj.tld[0]}}</span>
+                </p>
+                <p>
+                    Currencies: <span class="data">{{currency}}</span>
+                </p>
+                <p>
+                    Languages: <span class="data">{{language}}</span> <span class="data" *ngIf="language2">{{language2}}</span>
+                </p>
+                <p>
+                    Independent: <span class="data">{{countryObj.independent ? 'Yes' : 'No'}}</span> 
+                </p>
+               </div>
+           </div>
+           <div class="border-list">
+               <div class="border-title">
+                    Border Countries: <span *ngIf="!borders">-</span>
+               </div>
+               <div id="border-links">
+                    <a *ngFor="let border of borders" href="/home/{{border}}">
+                        <span>{{ border }}</span>
+                    </a>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>

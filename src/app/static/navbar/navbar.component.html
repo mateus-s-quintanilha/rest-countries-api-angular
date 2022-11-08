@@ -1,0 +1,16 @@
+<div class="nav-content">
+    <span id="title-nav">Where in the World?</span>
+    <span id="change-theme">
+        <div (click)="onToggle()" id="mode">
+            <div *ngIf="darkMode == true">
+                <mat-icon>wb_sunny</mat-icon>  
+                <span>Light mode</span> 
+            </div>
+            <div *ngIf="darkMode == false">
+                <mat-icon>brightness_2</mat-icon>  
+                <span>Dark mode</span> 
+            </div>
+        </div>
+    </span>
+</div>
+

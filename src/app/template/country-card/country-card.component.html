@@ -1,0 +1,25 @@
+
+<!-- <img
+  src="https://flagcdn.com/h20/za.png"
+  srcset="https://flagcdn.com/h40/za.png 2x,
+    https://flagcdn.com/h60/za.png 3x"
+  height="20"
+  alt="South Africa"
+> -->
+
+<div class="country-card">
+    <img src="{{country.flags.png || country.flags.svg}}">
+    <div class="card-content">
+        <div id="title">{{country.name.common}}</div>
+        <div>
+            Population:  <span class="data">{{country.population}}</span>
+        </div>
+        <div
+            >Region:  <span class="data">{{country.region}}</span>
+        </div>
+        <div
+            >Capital:  <span class="data">{{country.capital ? country.capital[0] : 'none'}}</span>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,37 @@
+<div class="inputs">
+    <mat-form-field id="search" appearance="fill">
+        <mat-label id="input-label" style="color: #fff;">Search countries by name</mat-label>
+        <input matInput [(ngModel)]="searchTerm" />
+        <mat-icon matPrefix style="color: #fff;">search</mat-icon>
+    </mat-form-field>
+    
+    
+    
+    <mat-form-field id="select" appearance="fill">
+      <mat-label style="color: #fff;">Select the continent</mat-label>
+      <select matNativeControl id="mySelectId" (ngModelChange)="onChange($event)" [(ngModel)]="selectedCont">
+        <option value="All" selected>All</option>
+        <option value="Europe">Europe</option>
+        <option value="Asia">Asia</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </mat-form-field>
+</div>
+
+<div class="container">
+
+  <div *ngFor="let card of cards">
+    <a routerLink="/{{card.cca3}}">
+      <app-country-card id="component" [country]= "card"></app-country-card>
+    </a>
+  </div>
+
+  <div id="renderMsg" *ngIf="renderMsg == true">
+    <div>
+      COUNTRY NOT FOUND
+    </div>
+  </div>
+
+</div>
